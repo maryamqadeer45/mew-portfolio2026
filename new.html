@@ -1,3 +1,5 @@
+Here is the updated HTML code with your new portfolio link added as an additional project in the portfolio section.
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -581,6 +583,7 @@
                 <button class="filter-btn" data-filter="mern">MERN Stack</button>
                 <button class="filter-btn" data-filter="frontend">Frontend</button>
                 <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="portfolio">Portfolio</button>
             </div>
             
             <div class="projects-grid" id="projectsGridContainer">
@@ -612,7 +615,7 @@
                 </div>
                 
                 <!-- Project 3 - Portfolio Template -->
-                <div class="glass-card project-card" data-category="frontend">
+                <div class="glass-card project-card" data-category="frontend portfolio">
                     <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" class="project-img" alt="Portfolio Template">
                     <h3>Portfolio Template</h3>
                     <p>Modern and responsive portfolio template with clean design, smooth animations, and optimized performance.</p>
@@ -650,7 +653,7 @@
                     </div>
                 </div>
                 
-                <!-- Project 6 - Project Management Tool (REPLACED LINK with new URL) -->
+                <!-- Project 6 - Project Management Tool -->
                 <div class="glass-card project-card" data-category="frontend">
                     <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600" class="project-img" alt="Project Management">
                     <h3>Project Management Tool</h3>
@@ -659,13 +662,12 @@
                         <span class="tag">React</span><span class="tag">UI/UX</span><span class="tag">Drag & Drop</span>
                     </div>
                     <div class="project-links">
-                        <!-- UPDATED LINK: replaced previous whitespace-project-beta with the new target URL -->
                         <a href="https://new-whitespace-project.vercel.app/" target="_blank" class="project-link-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                     </div>
                 </div>
                 
                 <!-- Project 7 - Portfolio Design v2 -->
-                <div class="glass-card project-card" data-category="frontend">
+                <div class="glass-card project-card" data-category="frontend portfolio">
                     <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600" class="project-img" alt="Portfolio Design">
                     <h3>Portfolio Design v2</h3>
                     <p>Clean and modern portfolio design template with smooth animations, responsive layout, and creative styling.</p>
@@ -674,6 +676,24 @@
                     </div>
                     <div class="project-links">
                         <a href="https://my-portfolio-kappa-vert-46.vercel.app/" target="_blank" class="project-link-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- Project 8 - NEW: Complete Portfolio Website (Added Link) -->
+                <div class="glass-card project-card" data-category="frontend portfolio featured">
+                    <img src="https://images.unsplash.com/photo-1517292987719-0369a794ec0f?w=600" class="project-img" alt="Complete Portfolio Website">
+                    <h3>✨ Complete Portfolio Website</h3>
+                    <p>Feature-rich personal portfolio with modern UI, responsive design, smooth scrolling, and interactive elements — built to showcase professional work and attract clients.</p>
+                    <div class="tech-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Responsive</span>
+                        <span class="tag">Modern UI</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://portfolio-website-orpin-pi-83.vercel.app/" target="_blank" class="project-link-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="#contact" class="project-link-btn"><i class="fas fa-code-branch"></i> Get Similar</a>
                     </div>
                 </div>
             </div>
@@ -732,7 +752,7 @@
         <p style="font-size: 0.8rem; margin-top: 0.5rem;">📍 Available worldwide | 24hr response time</p>
     </footer>
 
-    <!-- Filter functionality JavaScript -->
+    <!-- Filter functionality JavaScript (Enhanced for new filter) -->
     <script>
         (function() {
             const filterBtns = document.querySelectorAll('.filter-btn');
@@ -741,6 +761,7 @@
             function filterProjects(filterValue) {
                 projectCards.forEach(card => {
                     const categories = card.getAttribute('data-category');
+                    // Check if the card matches the selected filter (either 'all' or category string contains filter)
                     if (filterValue === 'all' || categories.includes(filterValue)) {
                         card.style.display = 'block';
                         setTimeout(() => {
@@ -766,9 +787,10 @@
                 });
             });
             
-            // initial show all
+            // initial show all projects
             filterProjects('all');
         })();
     </script>
 </body>
 </html>
+```
